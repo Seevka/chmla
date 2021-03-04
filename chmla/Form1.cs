@@ -204,7 +204,6 @@ namespace chmla
                 //textBox17.Text += (x1, x2, x3, x1m, x2m, x3m, x1l, x2l, x3l, y1, y2, y3);
                 double d, s;
 
-                Console.Write("Введите размерность: ");
                 int row = 0;
                 if (comboBox1.SelectedIndex == 0)
                 {
@@ -292,8 +291,6 @@ namespace chmla
                 double y4 = double.Parse(textBox13.Text);
                 //textBox17.Text += (x1, x2, x3, x1m, x2m, x3m, x1l, x2l, x3l,x1ll,x2ll,x3ll, y1, y2, y3,y4);
                 double d, s;
-
-                Console.Write("Введите размерность: ");
                 int row = 0;
                 if (comboBox1.SelectedIndex == 0)
                 {
