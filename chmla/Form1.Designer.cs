@@ -77,6 +77,13 @@ namespace chmla
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -235,7 +242,7 @@ namespace chmla
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(845, 85);
+            this.label10.Location = new System.Drawing.Point(829, 83);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(24, 25);
             this.label10.TabIndex = 18;
@@ -245,7 +252,7 @@ namespace chmla
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(845, 147);
+            this.label11.Location = new System.Drawing.Point(829, 145);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(24, 25);
             this.label11.TabIndex = 19;
@@ -255,7 +262,7 @@ namespace chmla
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(845, 216);
+            this.label12.Location = new System.Drawing.Point(829, 214);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(24, 25);
             this.label12.TabIndex = 20;
@@ -288,17 +295,18 @@ namespace chmla
             this.comboBox1.Items.AddRange(new object[] {
             "3x3",
             "4x4"});
-            this.comboBox1.Location = new System.Drawing.Point(181, 376);
+            this.comboBox1.Location = new System.Drawing.Point(46, 400);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(118, 21);
             this.comboBox1.TabIndex = 24;
+            this.comboBox1.Text = "            -Select-";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(530, 365);
+            this.button1.Location = new System.Drawing.Point(12, 461);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(211, 51);
             this.button1.TabIndex = 25;
             this.button1.Text = "Порахувати";
             this.button1.UseVisualStyleBackColor = true;
@@ -310,18 +318,17 @@ namespace chmla
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(100, 20);
             this.textBox13.TabIndex = 33;
-            this.textBox13.Visible = false;
+            this.textBox13.TextChanged += new System.EventHandler(this.textBox13_TextChanged_1);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(845, 273);
+            this.label13.Location = new System.Drawing.Point(829, 271);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(24, 25);
             this.label13.TabIndex = 32;
             this.label13.Text = "=";
-            this.label13.Visible = false;
             // 
             // label14
             // 
@@ -331,7 +338,6 @@ namespace chmla
             this.label14.Size = new System.Drawing.Size(20, 13);
             this.label14.TabIndex = 31;
             this.label14.Text = "X3";
-            this.label14.Visible = false;
             // 
             // label15
             // 
@@ -341,7 +347,6 @@ namespace chmla
             this.label15.Size = new System.Drawing.Size(20, 13);
             this.label15.TabIndex = 30;
             this.label15.Text = "X2";
-            this.label15.Visible = false;
             // 
             // label16
             // 
@@ -351,7 +356,6 @@ namespace chmla
             this.label16.Size = new System.Drawing.Size(20, 13);
             this.label16.TabIndex = 29;
             this.label16.Text = "X1";
-            this.label16.Visible = false;
             // 
             // textBox14
             // 
@@ -359,7 +363,6 @@ namespace chmla
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(100, 20);
             this.textBox14.TabIndex = 28;
-            this.textBox14.Visible = false;
             // 
             // textBox15
             // 
@@ -367,7 +370,6 @@ namespace chmla
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(100, 20);
             this.textBox15.TabIndex = 27;
-            this.textBox15.Visible = false;
             // 
             // textBox16
             // 
@@ -376,38 +378,37 @@ namespace chmla
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(100, 20);
             this.textBox16.TabIndex = 26;
-            this.textBox16.Visible = false;
             // 
             // textBox17
             // 
-            this.textBox17.Location = new System.Drawing.Point(358, 447);
+            this.textBox17.Location = new System.Drawing.Point(343, 477);
             this.textBox17.Multiline = true;
             this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(459, 100);
+            this.textBox17.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBox17.Size = new System.Drawing.Size(556, 175);
             this.textBox17.TabIndex = 34;
+            this.textBox17.TextChanged += new System.EventHandler(this.textBox17_TextChanged);
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(703, 282);
+            this.label17.Location = new System.Drawing.Point(701, 281);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(20, 13);
             this.label17.TabIndex = 42;
             this.label17.Text = "X4";
-            this.label17.Visible = false;
             // 
             // textBox18
             // 
-            this.textBox18.Location = new System.Drawing.Point(597, 278);
+            this.textBox18.Location = new System.Drawing.Point(595, 277);
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(100, 20);
             this.textBox18.TabIndex = 41;
-            this.textBox18.Visible = false;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(703, 225);
+            this.label18.Location = new System.Drawing.Point(701, 224);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(20, 13);
             this.label18.TabIndex = 40;
@@ -416,7 +417,7 @@ namespace chmla
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(703, 153);
+            this.label19.Location = new System.Drawing.Point(701, 152);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(20, 13);
             this.label19.TabIndex = 39;
@@ -425,7 +426,7 @@ namespace chmla
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(703, 91);
+            this.label20.Location = new System.Drawing.Point(701, 90);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(20, 13);
             this.label20.TabIndex = 38;
@@ -433,21 +434,21 @@ namespace chmla
             // 
             // textBox19
             // 
-            this.textBox19.Location = new System.Drawing.Point(597, 149);
+            this.textBox19.Location = new System.Drawing.Point(595, 148);
             this.textBox19.Name = "textBox19";
             this.textBox19.Size = new System.Drawing.Size(100, 20);
             this.textBox19.TabIndex = 37;
             // 
             // textBox20
             // 
-            this.textBox20.Location = new System.Drawing.Point(597, 221);
+            this.textBox20.Location = new System.Drawing.Point(595, 220);
             this.textBox20.Name = "textBox20";
             this.textBox20.Size = new System.Drawing.Size(100, 20);
             this.textBox20.TabIndex = 36;
             // 
             // textBox21
             // 
-            this.textBox21.Location = new System.Drawing.Point(597, 87);
+            this.textBox21.Location = new System.Drawing.Point(595, 86);
             this.textBox21.Name = "textBox21";
             this.textBox21.Size = new System.Drawing.Size(100, 20);
             this.textBox21.TabIndex = 35;
@@ -456,7 +457,7 @@ namespace chmla
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label21.Location = new System.Drawing.Point(740, 190);
+            this.label21.Location = new System.Drawing.Point(726, 186);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(18, 24);
             this.label21.TabIndex = 43;
@@ -466,18 +467,17 @@ namespace chmla
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label22.Location = new System.Drawing.Point(780, 273);
+            this.label22.Location = new System.Drawing.Point(752, 271);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(49, 25);
             this.label22.TabIndex = 47;
             this.label22.Text = "(x4)";
-            this.label22.Visible = false;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label23.Location = new System.Drawing.Point(780, 220);
+            this.label23.Location = new System.Drawing.Point(752, 218);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(49, 25);
             this.label23.TabIndex = 46;
@@ -487,7 +487,7 @@ namespace chmla
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label24.Location = new System.Drawing.Point(780, 147);
+            this.label24.Location = new System.Drawing.Point(752, 145);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(49, 25);
             this.label24.TabIndex = 45;
@@ -497,11 +497,81 @@ namespace chmla
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label25.Location = new System.Drawing.Point(780, 87);
+            this.label25.Location = new System.Drawing.Point(752, 86);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(49, 25);
             this.label25.TabIndex = 44;
             this.label25.Text = "(x1)";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label27.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label27.Location = new System.Drawing.Point(12, 355);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(211, 19);
+            this.label27.TabIndex = 49;
+            this.label27.Text = "Оберіть розмірність матриці";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label26.Location = new System.Drawing.Point(555, 443);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(98, 20);
+            this.label26.TabIndex = 50;
+            this.label26.Text = "Результат";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(12, 530);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(211, 56);
+            this.button2.TabIndex = 51;
+            this.button2.Text = "Очистити введені значення";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(12, 602);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(211, 50);
+            this.button3.TabIndex = 52;
+            this.button3.Text = "Очистити результат";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(352, 355);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(161, 55);
+            this.button4.TabIndex = 53;
+            this.button4.Text = "Зберегти результат у файл";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(692, 355);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(161, 55);
+            this.button5.TabIndex = 54;
+            this.button5.Text = "Відкрити з файлу";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(939, 602);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(107, 38);
+            this.button6.TabIndex = 55;
+            this.button6.Text = "Вийти";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // Form1
             // 
@@ -509,6 +579,13 @@ namespace chmla
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1058, 664);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label26);
+            this.Controls.Add(this.label27);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.label24);
@@ -558,7 +635,7 @@ namespace chmla
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Чисельні Методи";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -615,6 +692,13 @@ namespace chmla
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }
 

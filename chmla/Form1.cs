@@ -7,11 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Windows.Forms;
+using System.IO;
+using System.Net;
 
 namespace chmla
 {
     public partial class Form1 : Form
     {
+        int count = 0;
         public Form1()
         {
             InitializeComponent();
@@ -29,8 +37,18 @@ namespace chmla
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedIndex==0)
+            if (comboBox1.SelectedIndex == 0)
             {
+                textBox10.Location = new Point(700, 87);
+                textBox11.Location = new Point(700, 149);
+                textBox12.Location = new Point(700, 221);
+                label25.Location = new Point(588, 84);
+                label24.Location = new Point(588, 143);
+                label23.Location = new Point(588, 216);
+                label21.Location = new Point(564, 152);
+                label10.Location = new Point(655, 84);
+                label11.Location = new Point(655, 146);
+                label12.Location = new Point(655, 215);
                 textBox16.Visible = false;
                 textBox15.Visible = false;
                 textBox14.Visible = false;
@@ -39,18 +57,31 @@ namespace chmla
                 label15.Visible = false;
                 label14.Visible = false;
                 label13.Visible = false;
-                textBox21.Visible = false;
-                textBox20.Visible = false;
-                textBox19.Visible = false;
                 textBox18.Visible = false;
+                label18.Visible = false;
+                textBox21.Visible = false;
+                textBox19.Visible = false;
+                textBox20.Visible = false;
                 label20.Visible = false;
                 label19.Visible = false;
-                label18.Visible = false;
                 label17.Visible = false;
                 label22.Visible = false;
+
+
             }
             else
             {
+                textBox10.Location = new Point(899, 88);
+                textBox11.Location = new Point(899, 150);
+                textBox12.Location = new Point(899, 221);
+                textBox13.Location = new Point(899, 278);
+                label25.Location = new Point(752, 86);
+                label24.Location = new Point(752, 145);
+                label23.Location = new Point(752, 218);
+                label21.Location = new Point(726, 186);
+                label10.Location = new Point(829, 83);
+                label11.Location = new Point(829, 145);
+                label12.Location = new Point(829, 214);
                 textBox16.Visible = true;
                 textBox15.Visible = true;
                 textBox14.Visible = true;
@@ -60,14 +91,15 @@ namespace chmla
                 label14.Visible = true;
                 label13.Visible = true;
                 textBox21.Visible = true;
-                textBox20.Visible = true;
-                textBox19.Visible = true;
-                textBox18.Visible = true;
-                label20.Visible = true;
-                label19.Visible =true;
                 label18.Visible = true;
+                textBox19.Visible = true;
+                textBox20.Visible = true;
+                label20.Visible = true;
+                label19.Visible = true;
                 label17.Visible = true;
                 label22.Visible = true;
+                textBox18.Visible = true;
+
             }
             //TextBox t = new TextBox();
             //Label l = new Label();
@@ -154,6 +186,7 @@ namespace chmla
 
         private void button1_Click(object sender, EventArgs e)
         {
+            count += 1;
             if (comboBox1.SelectedIndex == 0)
             {
                 double x1 = double.Parse(textBox1.Text);
@@ -182,7 +215,6 @@ namespace chmla
                     row = 4;
                 }
 
-
                 double[,] A = new double[row, row];
                 double[,] a = new double[row, row];
                 double[] B = new double[row];
@@ -200,12 +232,13 @@ namespace chmla
                 A[2, 1] = x2l;
                 A[2, 2] = x3l;
                 B[2] = y3;
-
+               double det = 1;
                 for (int k = 0; k < row; k++)
                 {
                     for (int j = k + 1; j < row; j++)
                     {
                         d = A[j, k] / A[k, k];
+                        det=det* A[j, k];
                         for (int i = k; i < row; i++)
                         {
                             A[j, i] = A[j, i] - d * A[k, i];
@@ -226,11 +259,12 @@ namespace chmla
                 }
 
 
-
+                textBox17.Text += ($"Your  {count}  system\r\n");
                 for (int i = 0; i < row; i++)
                 {
-                    textBox17.Text+=($"x[{i}]= {x[i]}");
+                    textBox17.Text+=($"x[{i}]= {x[i]}\r\n");
                 }
+                textBox17.Text += det;
 
             }
 
@@ -269,8 +303,7 @@ namespace chmla
                 {
                     row = 4;
                 }
-
-
+                int four = 0;
                 double[,] A = new double[row, row];
                 double[,] a = new double[row, row];
                 double[] B = new double[row];
@@ -296,13 +329,14 @@ namespace chmla
                 A[3,2]= x3ll;
                 A[3, 3] = x4ll;
                 B[3] = y4;
-                
+                double det = 1;
 
                 for (int k = 0; k < row; k++)
                 {
                     for (int j = k + 1; j < row; j++)
                     {
                         d = A[j, k] / A[k, k];
+                        det = det * A[j, k];
                         for (int i = k; i < row; i++)
                         {
                             A[j, i] = A[j, i] - d * A[k, i];
@@ -323,11 +357,12 @@ namespace chmla
                 }
 
 
-
+                textBox17.Text += ($"Your {count}system\r\n");
                 for (int i = 0; i < row; i++)
                 {
-                    textBox17.Text += ($"x[{i}]= {x[i]} ");
+                    textBox17.Text += ($"x[{i}]= {x[i]}\r\n ");
                 }
+                textBox17.Text += det;
 
             }
         }
@@ -357,6 +392,88 @@ namespace chmla
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox13_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox17_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox5.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox9.Text = "";
+            textBox6.Text = "";
+            textBox7.Text = "";
+            textBox8.Text = "";
+            textBox10.Text = "";
+            textBox11.Text = "";
+            textBox12.Text = "";
+            textBox16.Text = "";
+            textBox15.Text = "";
+            textBox14.Text = "";
+            textBox18.Text = "";
+            textBox20.Text = "";
+            textBox19.Text = "";
+            textBox21.Text = "";
+            textBox13.Text = "";
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            textBox17.Text = "";
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                File.WriteAllText(sfd.FileName, textBox17.Text);
+            }
+            MessageBox.Show(
+        "       Успішно збережено!",
+        ""
+        );
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+        "Бажаєте зберегти дані перед виходом?",
+        "Увага!",
+        MessageBoxButtons.YesNoCancel,
+        MessageBoxIcon.Information,
+        MessageBoxDefaultButton.Button1,
+        MessageBoxOptions.DefaultDesktopOnly);
+
+            if (result == DialogResult.Yes)
+            {
+                button1.BackColor = Color.Red;
+                SaveFileDialog sfd = new SaveFileDialog();
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    File.WriteAllText(sfd.FileName, textBox17.Text);
+                }
+                MessageBox.Show(
+            "       Успішно збережено!",
+            ""
+            );
+                Application.Exit();
+            }
+            if (result == DialogResult.No)
+            {
+                Application.Exit();
+            }
         }
     }
 }
