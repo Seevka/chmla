@@ -29,64 +29,106 @@ namespace chmla
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            TextBox t = new TextBox();
-            Label l = new Label();
-            l.Name = "q";
-            t.Name = "t";
-            TextBox t1 = new TextBox();
-            t1.Name = "e";
-            Label l1 = new Label();
-            l1.Name = "q";
-            TextBox t2 = new TextBox();
-            Label l2 = new Label();
-            l2.Name = "q";
-            t2.Name = "t";
-            Label l3 = new Label();
-            l3.Name = "e1";
-            TextBox t3 = new TextBox();
-            t3.Name = "t";
-            if (comboBox1.SelectedIndex == 1)
+            if (comboBox1.SelectedIndex==0)
             {
-                t.Location = new Point(72, 280);
-                this.Controls.Add(t);
-                l.Text = "X1";
-                l.Location = new Point(178, 285);
-                this.Controls.Add(l);
-                //
-                t1.Location = new Point(296, 280);
-                this.Controls.Add(t1);
-                l1.Text = "X2";
-                l1.Location = new Point(402, 285);
-                l1.AutoSize = true;
-                this.Controls.Add(l1);
-                //
-                t2.Location = new Point(498, 280);
-                this.Controls.Add(t2);
-                l2.Text = "X3";
-                l2.Location = new Point(604, 285);
-                l2.AutoSize = true;
-                this.Controls.Add(l2);
-                //
-                l3.Text = "=";
-                l3.Font = new Font("Microsoft Sans Serif", 16);
-                l3.Location = new Point(630, 276);
-                l3.AutoSize = true;
-                this.Controls.Add(l3);
-                //
-                t3.Location = new Point(680, 280);
-                this.Controls.Add(t3);
+                textBox16.Visible = false;
+                textBox15.Visible = false;
+                textBox14.Visible = false;
+                textBox13.Visible = false;
+                label16.Visible = false;
+                label15.Visible = false;
+                label14.Visible = false;
+                label13.Visible = false;
+                textBox21.Visible = false;
+                textBox20.Visible = false;
+                textBox19.Visible = false;
+                textBox18.Visible = false;
+                label20.Visible = false;
+                label19.Visible = false;
+                label18.Visible = false;
+                label17.Visible = false;
+                label22.Visible = false;
             }
-            if(comboBox1.SelectedIndex==0)
+            else
             {
-                foreach (Control ctrl in this.Controls.OfType<Label>().Where(x => x.Name == "q")) { this.Controls.Remove(ctrl); }
-                foreach (Control ctrl in this.Controls.OfType<TextBox>().Where(x => x.Name == "t")) { this.Controls.Remove(ctrl); }
-                foreach (Control ctrl in this.Controls.OfType<TextBox>().Where(x => x.Name == "e")) { this.Controls.Remove(ctrl); }
-                foreach (Control ctrl in this.Controls.OfType<Label>().Where(x => x.Name == "e1")) { this.Controls.Remove(ctrl); }
+                textBox16.Visible = true;
+                textBox15.Visible = true;
+                textBox14.Visible = true;
+                textBox13.Visible = true;
+                label16.Visible = true;
+                label15.Visible = true;
+                label14.Visible = true;
+                label13.Visible = true;
+                textBox21.Visible = true;
+                textBox20.Visible = true;
+                textBox19.Visible = true;
+                textBox18.Visible = true;
+                label20.Visible = true;
+                label19.Visible =true;
+                label18.Visible = true;
+                label17.Visible = true;
+                label22.Visible = true;
             }
-                
+            //TextBox t = new TextBox();
+            //Label l = new Label();
+            //l.Name = "q";
+            //t.Name = "t";
+            //TextBox t1 = new TextBox();
+            //t1.Name = "e";
+            //Label l1 = new Label();
+            //l1.Name = "q";
+            //TextBox t2 = new TextBox();
+            //Label l2 = new Label();
+            //l2.Name = "q";
+            //t2.Name = "t";
+            //Label l3 = new Label();
+            //l3.Name = "e1";
+            //TextBox t3 = new TextBox();
+            //t3.Name = "t";
+            //if (comboBox1.SelectedIndex == 1)
+            //{
+            //    t.Location = new Point(72, 280);
+            //    this.Controls.Add(t);
+            //    l.Text = "X1";
+            //    l.Location = new Point(178, 285);
+            //    this.Controls.Add(l);
+            //    //
+            //    t1.Location = new Point(296, 280);
+            //    this.Controls.Add(t1);
+            //    l1.Text = "X2";
+            //    l1.Location = new Point(402, 285);
+            //    l1.AutoSize = true;
+            //    this.Controls.Add(l1);
+            //    //
+            //    t2.Location = new Point(498, 280);
+            //    this.Controls.Add(t2);
+            //    l2.Text = "X3";
+            //    l2.Location = new Point(604, 285);
+            //    l2.AutoSize = true;
+            //    this.Controls.Add(l2);
+            //    //
+            //    l3.Text = "=";
+            //    l3.Font = new Font("Microsoft Sans Serif", 16);
+            //    l3.Location = new Point(630, 276);
+            //    l3.AutoSize = true;
+            //    this.Controls.Add(l3);
+            //    //
+            //    t3.Location = new Point(680, 280);
+            //    this.Controls.Add(t3);
+            //}
+            //if(comboBox1.SelectedIndex==0)
+            //{
+            //    l.Visible = false;
+            //    foreach (Control ctrl in this.Controls.OfType<Label>().Where(x => x.Name == "q")) { this.Controls.Remove(ctrl); }
+            //    foreach (Control ctrl in this.Controls.OfType<TextBox>().Where(x => x.Name == "t")) { this.Controls.Remove(ctrl); }
+            //    foreach (Control ctrl in this.Controls.OfType<TextBox>().Where(x => x.Name == "e")) { this.Controls.Remove(ctrl); }
+            //    foreach (Control ctrl in this.Controls.OfType<Label>().Where(x => x.Name == "e1")) { this.Controls.Remove(ctrl); }
+            //}
+            //можна було це все через visible!!!
 
 
-            }
+
+        }
  
         
 
@@ -106,6 +148,213 @@ namespace chmla
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex == 0)
+            {
+                double x1 = double.Parse(textBox1.Text);
+                double x2 = double.Parse(textBox2.Text);
+                double x3 = double.Parse(textBox5.Text);
+                double x1m = double.Parse(textBox3.Text);
+                double x2m = double.Parse(textBox4.Text);
+                double x3m = double.Parse(textBox9.Text);
+                double x1l = double.Parse(textBox6.Text);
+                double x2l = double.Parse(textBox7.Text);
+                double x3l = double.Parse(textBox8.Text);
+                double y1 = double.Parse(textBox10.Text);
+                double y2 = double.Parse(textBox11.Text);
+                double y3 = double.Parse(textBox12.Text);
+                //textBox17.Text += (x1, x2, x3, x1m, x2m, x3m, x1l, x2l, x3l, y1, y2, y3);
+                double d, s;
+
+                Console.Write("Введите размерность: ");
+                int row = 0;
+                if (comboBox1.SelectedIndex == 0)
+                {
+                    row = 3;
+                }
+                else
+                {
+                    row = 4;
+                }
+
+
+                double[,] A = new double[row, row];
+                double[,] a = new double[row, row];
+                double[] B = new double[row];
+                double[] x = new double[row];
+                double[] b = new double[row];
+                A[0, 0] = x1;
+                A[0, 1] = x2;
+                A[0, 2] = x3;
+                B[0] = y1;
+                A[1, 0] = x1m;
+                A[1, 1] = x2m;
+                A[1, 2] = x3m;
+                B[1] = y2;
+                A[2, 0] = x1l;
+                A[2, 1] = x2l;
+                A[2, 2] = x3l;
+                B[2] = y3;
+
+                for (int k = 0; k < row; k++)
+                {
+                    for (int j = k + 1; j < row; j++)
+                    {
+                        d = A[j, k] / A[k, k];
+                        for (int i = k; i < row; i++)
+                        {
+                            A[j, i] = A[j, i] - d * A[k, i];
+                        }
+                        B[j] = B[j] - d * B[k];
+                    }
+                }
+
+                for (int k = row - 1; k >= 0; k--)
+                {
+                    d = 0;
+                    for (int j = k; j < row; j++)
+                    {
+                        s = A[k, j] * x[j];
+                        d += s;
+                    }
+                    x[k] = (B[k] - d) / A[k, k];
+                }
+
+
+
+                for (int i = 0; i < row; i++)
+                {
+                    textBox17.Text+=($"x[{i}]= {x[i]}");
+                }
+
+            }
+
+            else
+            {
+                double x1 = double.Parse(textBox1.Text);
+                double x2 = double.Parse(textBox2.Text);
+                double x3 = double.Parse(textBox5.Text);
+                double x4 = double.Parse(textBox21.Text);
+                double x1m = double.Parse(textBox3.Text);
+                double x2m = double.Parse(textBox4.Text);
+                double x3m = double.Parse(textBox9.Text);
+                double x4m = double.Parse(textBox19.Text);
+                double x1l = double.Parse(textBox6.Text);
+                double x2l = int.Parse(textBox7.Text);
+                double x3l = int.Parse(textBox8.Text);
+                double x4l = int.Parse(textBox20.Text);
+                double x1ll = int.Parse(textBox16.Text);
+                double x2ll = int.Parse(textBox15.Text);
+                double x3ll = int.Parse(textBox14.Text);
+                double x4ll = int.Parse(textBox18.Text);
+                double y1 = double.Parse(textBox10.Text);
+                double y2 = double.Parse(textBox11.Text);
+                double y3 = double.Parse(textBox12.Text);
+                double y4 = double.Parse(textBox13.Text);
+                //textBox17.Text += (x1, x2, x3, x1m, x2m, x3m, x1l, x2l, x3l,x1ll,x2ll,x3ll, y1, y2, y3,y4);
+                double d, s;
+
+                Console.Write("Введите размерность: ");
+                int row = 0;
+                if (comboBox1.SelectedIndex == 0)
+                {
+                    row = 3;
+                }
+                else
+                {
+                    row = 4;
+                }
+
+
+                double[,] A = new double[row, row];
+                double[,] a = new double[row, row];
+                double[] B = new double[row];
+                double[] x = new double[row];
+                double[] b = new double[row];
+                A[0, 0] = x1;
+                A[0, 1] = x2;
+                A[0, 2] = x3;
+                A[0, 3] = x4;
+                B[0] = y1;
+                A[1, 0] = x1m;
+                A[1, 1] = x2m;
+                A[1, 2] = x3m;
+                A[1, 3] = x4m;
+                B[1] = y2;
+                A[2, 0] = x1l;
+                A[2, 1] = x2l;
+                A[2, 2] = x3l;
+                A[2, 3] = x4l;
+                B[2] = y3;
+                A[3, 0] = x1ll;
+                A[3, 1] = x2ll;
+                A[3,2]= x3ll;
+                A[3, 3] = x4ll;
+                B[3] = y4;
+                
+
+                for (int k = 0; k < row; k++)
+                {
+                    for (int j = k + 1; j < row; j++)
+                    {
+                        d = A[j, k] / A[k, k];
+                        for (int i = k; i < row; i++)
+                        {
+                            A[j, i] = A[j, i] - d * A[k, i];
+                        }
+                        B[j] = B[j] - d * B[k];
+                    }
+                }
+
+                for (int k = row - 1; k >= 0; k--)
+                {
+                    d = 0;
+                    for (int j = k; j < row; j++)
+                    {
+                        s = A[k, j] * x[j];
+                        d += s;
+                    }
+                    x[k] = (B[k] - d) / A[k, k];
+                }
+
+
+
+                for (int i = 0; i < row; i++)
+                {
+                    textBox17.Text += ($"x[{i}]= {x[i]} ");
+                }
+
+            }
+        }
+
+
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
