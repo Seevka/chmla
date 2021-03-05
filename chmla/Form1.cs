@@ -333,7 +333,7 @@ namespace chmla
                     for (int j = k + 1; j < row; j++)
                     {
                         d = A[j, k] / A[k, k];
-                        det = det * A[j, k];
+                        det = det * A[k, j];
                         for (int i = k; i < row; i++)
                         {
                             A[j, i] = A[j, i] - d * A[k, i];
@@ -471,6 +471,53 @@ namespace chmla
             {
                 Application.Exit();
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog
+            {
+                InitialDirectory = @"D:",
+                Title = "Browse Text Files",
+
+                CheckFileExists = true,
+                CheckPathExists = true,
+
+                DefaultExt = "txt",
+                Filter = "txt files (*.txt)|*.txt",
+                FilterIndex = 2,
+                RestoreDirectory = true,
+
+                ReadOnlyChecked = true,
+                ShowReadOnly = true
+            };
+            if (comboBox1.SelectedIndex==0&& openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string filename = openFileDialog1.FileName;
+                string fileText = File.ReadAllText(filename);
+                string phrase = fileText;
+                phrase = phrase.Replace(Environment.NewLine, " ");
+                string[] chysla = phrase.Split(' ');
+                List<string> str = new List<string>();
+                foreach(var ch in chysla)
+                {
+                    str.Add(ch);
+                }
+
+                textBox1.Text = str[0];
+                textBox2.Text = str[1];
+                textBox5.Text = str[2];
+                textBox10.Text = str[3];
+                textBox3.Text = str[4];
+                textBox4.Text = str[5];
+                textBox9.Text = str[6];
+                textBox11.Text = str[7];
+                textBox6.Text = str[8];
+                textBox7.Text = str[9];
+                textBox8.Text = str[10];
+                textBox12.Text = str[11];
+            }
+
         }
     }
 }
