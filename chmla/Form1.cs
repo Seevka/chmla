@@ -237,7 +237,6 @@ namespace chmla
                     for (int j = k + 1; j < row; j++)
                     {
                         d = A[j, k] / A[k, k];
-                        det=det* A[j, k];
                         for (int i = k; i < row; i++)
                         {
                             A[j, i] = A[j, i] - d * A[k, i];
@@ -255,6 +254,7 @@ namespace chmla
                         d += s;
                     }
                     x[k] = (B[k] - d) / A[k, k];
+                    det = det * A[k, k];
                 }
 
 
@@ -263,7 +263,7 @@ namespace chmla
                 {
                     textBox17.Text+=($"x[{i}]= {x[i]}\r\n");
                 }
-                textBox17.Text += det;
+                textBox17.Text +=($"Your determinant: {det}\r\n");
 
             }
 
@@ -333,7 +333,6 @@ namespace chmla
                     for (int j = k + 1; j < row; j++)
                     {
                         d = A[j, k] / A[k, k];
-                        det = det * A[k, j];
                         for (int i = k; i < row; i++)
                         {
                             A[j, i] = A[j, i] - d * A[k, i];
@@ -351,6 +350,7 @@ namespace chmla
                         d += s;
                     }
                     x[k] = (B[k] - d) / A[k, k];
+                    det = det * A[k, k];
                 }
 
 
@@ -359,7 +359,7 @@ namespace chmla
                 {
                     textBox17.Text += ($"x[{i}]= {x[i]}\r\n ");
                 }
-                textBox17.Text += det;
+                textBox17.Text += ($"Your determinant: {det}\r\n");
 
             }
         }
@@ -516,8 +516,46 @@ namespace chmla
                 textBox7.Text = str[9];
                 textBox8.Text = str[10];
                 textBox12.Text = str[11];
-            }
 
+            }
+            if (comboBox1.SelectedIndex == 1 && openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string filename = openFileDialog1.FileName;
+                string fileText = File.ReadAllText(filename);
+                string phrase = fileText;
+                phrase = phrase.Replace(Environment.NewLine, " ");
+                string[] chysla = phrase.Split(' ');
+                List<string> str = new List<string>();
+                foreach (var ch in chysla)
+                {
+                    str.Add(ch);
+                }
+
+                textBox1.Text = str[0];
+                textBox2.Text = str[1];
+                textBox5.Text = str[2];
+                textBox21.Text = str[3];
+                textBox10.Text = str[4];
+                textBox3.Text = str[5];
+                textBox4.Text = str[6];
+                textBox9.Text = str[7];
+                textBox19.Text = str[8];
+                textBox11.Text = str[9];
+                textBox6.Text = str[10];
+                textBox7.Text = str[11];
+                textBox8.Text = str[12];
+                textBox20.Text = str[13];
+                textBox12.Text = str[14];
+                textBox16.Text = str[15];
+                textBox15.Text = str[16];
+                textBox14.Text = str[17];
+                textBox18.Text = str[18];
+                textBox13.Text = str[19];
+
+
+
+
+            }
         }
     }
 }
