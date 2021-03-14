@@ -88,6 +88,7 @@ namespace chmla
             // 
             // textBox1
             // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox1.Location = new System.Drawing.Point(40, 86);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
@@ -96,6 +97,7 @@ namespace chmla
             // 
             // textBox2
             // 
+            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox2.Location = new System.Drawing.Point(234, 86);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
@@ -104,6 +106,7 @@ namespace chmla
             // 
             // textBox3
             // 
+            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox3.Location = new System.Drawing.Point(40, 149);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
@@ -112,6 +115,7 @@ namespace chmla
             // 
             // textBox4
             // 
+            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox4.Location = new System.Drawing.Point(234, 148);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
@@ -120,6 +124,7 @@ namespace chmla
             // 
             // textBox5
             // 
+            this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox5.Location = new System.Drawing.Point(436, 86);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 20);
@@ -128,6 +133,7 @@ namespace chmla
             // 
             // textBox6
             // 
+            this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox6.Location = new System.Drawing.Point(40, 220);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(100, 20);
@@ -135,6 +141,7 @@ namespace chmla
             // 
             // textBox7
             // 
+            this.textBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox7.Location = new System.Drawing.Point(234, 220);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(100, 20);
@@ -142,6 +149,7 @@ namespace chmla
             // 
             // textBox8
             // 
+            this.textBox8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox8.Location = new System.Drawing.Point(436, 220);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(100, 20);
@@ -150,6 +158,7 @@ namespace chmla
             // 
             // textBox9
             // 
+            this.textBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox9.Location = new System.Drawing.Point(436, 148);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(100, 20);
@@ -157,6 +166,7 @@ namespace chmla
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(144, 87);
             this.label1.Name = "label1";
@@ -167,6 +177,7 @@ namespace chmla
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(144, 149);
             this.label2.Name = "label2";
@@ -177,6 +188,7 @@ namespace chmla
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(144, 221);
             this.label3.Name = "label3";
@@ -186,6 +198,7 @@ namespace chmla
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(340, 89);
             this.label4.Name = "label4";
@@ -195,6 +208,7 @@ namespace chmla
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(340, 151);
             this.label5.Name = "label5";
@@ -204,6 +218,7 @@ namespace chmla
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(340, 223);
             this.label6.Name = "label6";
@@ -213,6 +228,7 @@ namespace chmla
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(542, 90);
             this.label7.Name = "label7";
@@ -222,6 +238,7 @@ namespace chmla
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(542, 152);
             this.label8.Name = "label8";
@@ -231,6 +248,7 @@ namespace chmla
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(542, 224);
             this.label9.Name = "label9";
@@ -240,6 +258,7 @@ namespace chmla
             // 
             // label10
             // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label10.Location = new System.Drawing.Point(829, 83);
@@ -250,6 +269,7 @@ namespace chmla
             // 
             // label11
             // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label11.Location = new System.Drawing.Point(829, 145);
@@ -260,6 +280,7 @@ namespace chmla
             // 
             // label12
             // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label12.Location = new System.Drawing.Point(829, 214);
@@ -270,6 +291,7 @@ namespace chmla
             // 
             // textBox10
             // 
+            this.textBox10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox10.Location = new System.Drawing.Point(899, 88);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(100, 20);
@@ -277,6 +299,7 @@ namespace chmla
             // 
             // textBox11
             // 
+            this.textBox11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox11.Location = new System.Drawing.Point(899, 150);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(100, 20);
@@ -284,6 +307,7 @@ namespace chmla
             // 
             // textBox12
             // 
+            this.textBox12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox12.Location = new System.Drawing.Point(899, 221);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(100, 20);
@@ -291,6 +315,7 @@ namespace chmla
             // 
             // comboBox1
             // 
+            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "3x3",
@@ -304,6 +329,7 @@ namespace chmla
             // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.Location = new System.Drawing.Point(12, 461);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(211, 51);
@@ -314,6 +340,7 @@ namespace chmla
             // 
             // textBox13
             // 
+            this.textBox13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox13.Location = new System.Drawing.Point(899, 278);
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(100, 20);
@@ -322,6 +349,7 @@ namespace chmla
             // 
             // label13
             // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label13.Location = new System.Drawing.Point(829, 271);
@@ -332,6 +360,7 @@ namespace chmla
             // 
             // label14
             // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(542, 281);
             this.label14.Name = "label14";
@@ -341,6 +370,7 @@ namespace chmla
             // 
             // label15
             // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(340, 280);
             this.label15.Name = "label15";
@@ -350,6 +380,7 @@ namespace chmla
             // 
             // label16
             // 
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(144, 278);
             this.label16.Name = "label16";
@@ -359,6 +390,7 @@ namespace chmla
             // 
             // textBox14
             // 
+            this.textBox14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox14.Location = new System.Drawing.Point(436, 277);
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(100, 20);
@@ -366,6 +398,7 @@ namespace chmla
             // 
             // textBox15
             // 
+            this.textBox15.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox15.Location = new System.Drawing.Point(234, 277);
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(100, 20);
@@ -373,6 +406,7 @@ namespace chmla
             // 
             // textBox16
             // 
+            this.textBox16.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox16.Location = new System.Drawing.Point(40, 277);
             this.textBox16.Multiline = true;
             this.textBox16.Name = "textBox16";
@@ -381,6 +415,7 @@ namespace chmla
             // 
             // textBox17
             // 
+            this.textBox17.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox17.Location = new System.Drawing.Point(343, 477);
             this.textBox17.Multiline = true;
             this.textBox17.Name = "textBox17";
@@ -391,6 +426,7 @@ namespace chmla
             // 
             // label17
             // 
+            this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(701, 281);
             this.label17.Name = "label17";
@@ -400,6 +436,7 @@ namespace chmla
             // 
             // textBox18
             // 
+            this.textBox18.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox18.Location = new System.Drawing.Point(595, 277);
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(100, 20);
@@ -407,6 +444,7 @@ namespace chmla
             // 
             // label18
             // 
+            this.label18.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(701, 224);
             this.label18.Name = "label18";
@@ -416,6 +454,7 @@ namespace chmla
             // 
             // label19
             // 
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label19.AutoSize = true;
             this.label19.Location = new System.Drawing.Point(701, 152);
             this.label19.Name = "label19";
@@ -425,6 +464,7 @@ namespace chmla
             // 
             // label20
             // 
+            this.label20.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label20.AutoSize = true;
             this.label20.Location = new System.Drawing.Point(701, 90);
             this.label20.Name = "label20";
@@ -434,6 +474,7 @@ namespace chmla
             // 
             // textBox19
             // 
+            this.textBox19.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox19.Location = new System.Drawing.Point(595, 148);
             this.textBox19.Name = "textBox19";
             this.textBox19.Size = new System.Drawing.Size(100, 20);
@@ -441,6 +482,7 @@ namespace chmla
             // 
             // textBox20
             // 
+            this.textBox20.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox20.Location = new System.Drawing.Point(595, 220);
             this.textBox20.Name = "textBox20";
             this.textBox20.Size = new System.Drawing.Size(100, 20);
@@ -448,6 +490,7 @@ namespace chmla
             // 
             // textBox21
             // 
+            this.textBox21.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox21.Location = new System.Drawing.Point(595, 86);
             this.textBox21.Name = "textBox21";
             this.textBox21.Size = new System.Drawing.Size(100, 20);
@@ -455,6 +498,7 @@ namespace chmla
             // 
             // label21
             // 
+            this.label21.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label21.Location = new System.Drawing.Point(726, 186);
@@ -465,6 +509,7 @@ namespace chmla
             // 
             // label22
             // 
+            this.label22.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label22.Location = new System.Drawing.Point(752, 271);
@@ -475,6 +520,7 @@ namespace chmla
             // 
             // label23
             // 
+            this.label23.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label23.Location = new System.Drawing.Point(752, 218);
@@ -485,6 +531,7 @@ namespace chmla
             // 
             // label24
             // 
+            this.label24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label24.Location = new System.Drawing.Point(752, 145);
@@ -495,6 +542,7 @@ namespace chmla
             // 
             // label25
             // 
+            this.label25.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label25.Location = new System.Drawing.Point(752, 86);
@@ -505,6 +553,7 @@ namespace chmla
             // 
             // label27
             // 
+            this.label27.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label27.AutoSize = true;
             this.label27.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.label27.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -516,6 +565,7 @@ namespace chmla
             // 
             // label26
             // 
+            this.label26.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label26.Location = new System.Drawing.Point(555, 443);
@@ -526,6 +576,7 @@ namespace chmla
             // 
             // button2
             // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button2.Location = new System.Drawing.Point(12, 530);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(211, 56);
@@ -536,6 +587,7 @@ namespace chmla
             // 
             // button3
             // 
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button3.Location = new System.Drawing.Point(12, 602);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(211, 50);
@@ -546,6 +598,7 @@ namespace chmla
             // 
             // button4
             // 
+            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button4.Location = new System.Drawing.Point(352, 355);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(161, 55);
@@ -556,6 +609,7 @@ namespace chmla
             // 
             // button5
             // 
+            this.button5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button5.Location = new System.Drawing.Point(692, 355);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(161, 55);
@@ -566,6 +620,7 @@ namespace chmla
             // 
             // button6
             // 
+            this.button6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button6.Location = new System.Drawing.Point(939, 602);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(107, 38);

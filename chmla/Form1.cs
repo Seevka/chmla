@@ -19,7 +19,6 @@ namespace chmla
 {
     public partial class Form1 : Form
     {
-        int count = 0;
         public Form1()
         {
             InitializeComponent();
@@ -183,12 +182,27 @@ namespace chmla
         {
 
         }
+        private void Print(double[,] a, double[] b, int n)
+        {
+            string s = "";
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    s+=(Math.Round(a[i, j], 6).ToString() + "\t");
+                    textBox17.Text+=(Math.Round(a[i, j], 6).ToString()+"\t");
+                }
+                s +=(Math.Round(b[i], 6).ToString()+"\t");
+                textBox17.Text+=(Math.Round(b[i], 6).ToString()+"\t");
+                s +=('\n');
+                textBox17.Text += "\r\n";          
+            }
 
+        }
         private void button1_Click(object sender, EventArgs e)
         {
-            count += 1;
             if (comboBox1.SelectedIndex == 0)
-            {
+            { 
                 double x1 = double.Parse(textBox1.Text);
                 double x2 = double.Parse(textBox2.Text);
                 double x3 = double.Parse(textBox5.Text);
@@ -231,9 +245,27 @@ namespace chmla
                 A[2, 1] = x2l;
                 A[2, 2] = x3l;
                 B[2] = y3;
-               double det = 1;
+                int countt = 0;
+                double det = 1;
                 for (int k = 0; k < row; k++)
                 {
+                    int noob = k;
+                    if (A[k,k]==0)
+                    {
+                        while(A[noob,k]==0&&k!=row-1)
+                        {
+                            noob += 1;
+                        }
+                        for (int j=0;j<row;j++)
+                        {
+                            double c = A[noob, j];
+                            A[noob, j] = A[k, j];
+                            A[k, j] = c;
+                        }
+                        double y = B[k];
+                        B[k] = B[noob];
+                        B[noob] = y;
+                    }
                     for (int j = k + 1; j < row; j++)
                     {
                         d = A[j, k] / A[k, k];
@@ -243,27 +275,50 @@ namespace chmla
                         }
                         B[j] = B[j] - d * B[k];
                     }
+                    Print(A, B, 3);
+                    textBox17.Text += "\r\n";
                 }
-
-                for (int k = row - 1; k >= 0; k--)
+                for (int i = 0; i < 3; i++)
                 {
-                    d = 0;
-                    for (int j = k; j < row; j++)
+                    det = det * A[i, i];
+                }
+                if (A[row-1,row-1]==0&&B[row-1]==0)
+                {
+                    textBox17.Text += "0x3=0 тому безліч розв'язків!";
+                    countt += 3;
+                }
+                if (Double.IsNaN(det) || det == 0)
+                {
+                    countt += 1;
+                }
+                else
+                {
+                    for (int k = row - 1; k >= 0; k--)
                     {
-                        s = A[k, j] * x[j];
-                        d += s;
+                        d = 0;
+                        for (int j = k; j < row; j++)
+                        {
+                            s = A[k, j] * x[j];
+                            d += s;
+                        }
+                        x[k] = (B[k] - d) / A[k, k];
+
                     }
-                    x[k] = (B[k] - d) / A[k, k];
-                    det = det * A[k, k];
                 }
 
-
-                textBox17.Text += ($"Your  {count}  system\r\n");
-                for (int i = 0; i < row; i++)
+                if (countt == 1)
                 {
-                    textBox17.Text+=($"x[{i}]= {x[i]}\r\n");
+                    textBox17.Text += "Матриця недійсна, визначник = 0";
                 }
-                textBox17.Text +=($"Your determinant: {det}\r\n");
+                if (countt==0)
+                {
+                    textBox17.Text += ($"\r\nYour system\r\n");
+                    for (int i = 0; i < row; i++)
+                    {
+                        textBox17.Text += ($"x[{i}]= {x[i]}\r\n");
+                    }
+                    textBox17.Text += ($"Your determinant: {det}\r\n");
+                }
 
             }
 
@@ -301,6 +356,8 @@ namespace chmla
                     row = 4;
                 }
                 int four = 0;
+                int count = 0;
+
                 double[,] A = new double[row, row];
                 double[,] a = new double[row, row];
                 double[] B = new double[row];
@@ -327,9 +384,25 @@ namespace chmla
                 A[3, 3] = x4ll;
                 B[3] = y4;
                 double det = 1;
-
                 for (int k = 0; k < row; k++)
                 {
+                    int noob = k;
+                    if (A[k, k] == 0)
+                    {
+                        while (A[noob, k] == 0&&k!=row-1)
+                        {
+                            noob += 1;
+                        }
+                        for (int j = 0; j < row; j++)
+                        {
+                            double c = A[noob, j];
+                            A[noob, j] = A[k, j];
+                            A[k, j] = c;
+                        }
+                        double y = B[k];
+                        B[k] = B[noob];
+                        B[noob] = y;
+                    }
                     for (int j = k + 1; j < row; j++)
                     {
                         d = A[j, k] / A[k, k];
@@ -339,27 +412,50 @@ namespace chmla
                         }
                         B[j] = B[j] - d * B[k];
                     }
+                    Print(A, B, 4);
+                    textBox17.Text += "\r\n";
                 }
-
-                for (int k = row - 1; k >= 0; k--)
+                for (int i = 0; i < 3; i++)
                 {
-                    d = 0;
-                    for (int j = k; j < row; j++)
+                    det = det * A[i, i];
+                }
+                if (A[row - 1, row - 1] == 0 && B[row - 1] == 0)
+                {
+                    textBox17.Text += "0x4=0 тому безліч розв'язків!";
+                    count += 3;
+                }
+                if (Double.IsNaN(det) || det == 0)
+                {
+                    count += 1;
+                }
+                else
+                {
+                    for (int k = row - 1; k >= 0; k--)
                     {
-                        s = A[k, j] * x[j];
-                        d += s;
+                        d = 0;
+                        for (int j = k; j < row; j++)
+                        {
+                            s = A[k, j] * x[j];
+                            d += s;
+                        }
+                        x[k] = (B[k] - d) / A[k, k];
+
                     }
-                    x[k] = (B[k] - d) / A[k, k];
-                    det = det * A[k, k];
                 }
 
-
-                textBox17.Text += ($"Your {count}system\r\n");
-                for (int i = 0; i < row; i++)
+                if (count == 1)
                 {
-                    textBox17.Text += ($"x[{i}]= {x[i]}\r\n ");
+                    textBox17.Text += "Матриця недійсна, визначник = 0";
                 }
-                textBox17.Text += ($"Your determinant: {det}\r\n");
+                if(count==0)
+                {
+                    textBox17.Text += ($"\r\nYour system\r\n");
+                    for (int i = 0; i < row; i++)
+                    {
+                        textBox17.Text += ($"x[{i}]= {x[i]}\r\n ");
+                    }
+                    textBox17.Text += ($"Your determinant: {det}\r\n");
+                }
 
             }
         }
@@ -424,7 +520,6 @@ namespace chmla
             textBox21.Text = "";
             textBox13.Text = "";
         }
-
         private void button3_Click(object sender, EventArgs e)
         {
             textBox17.Text = "";
@@ -551,10 +646,6 @@ namespace chmla
                 textBox14.Text = str[17];
                 textBox18.Text = str[18];
                 textBox13.Text = str[19];
-
-
-
-
             }
         }
     }
