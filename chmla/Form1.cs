@@ -387,7 +387,7 @@ namespace chmla
                 for (int k = 0; k < row; k++)
                 {
                     int noob = k;
-                    if (A[k, k] == 0)
+                    if (A[k, k] == 0)//перевіряємо чи катий елемент є 0, якщо є міняємо першим який не 0(рядки)
                     {
                         while (A[noob, k] == 0&&k!=row-1)
                         {
