@@ -415,7 +415,7 @@ namespace chmla
                     Print(A, B, 4);
                     textBox17.Text += "\r\n";
                 }
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < 4; i++)
                 {
                     det = det * A[i, i];
                 }
