@@ -295,7 +295,6 @@ namespace chmla
 
             if (result == DialogResult.Yes)
             {
-                button1.BackColor = Color.Red;
                 SaveFileDialog sfd = new SaveFileDialog();
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {
@@ -305,12 +304,25 @@ namespace chmla
             "       Успішно збережено!",
             ""
             );
-                Application.Exit();
+                this.Close();
             }
             if (result == DialogResult.No)
             {
-                Application.Exit();
+                this.Close();
             }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                File.WriteAllText(sfd.FileName, textBox1.Text);
+            }
+            MessageBox.Show(
+        "       Успішно збережено!",
+        ""
+        );
         }
     }
 }

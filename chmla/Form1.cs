@@ -560,11 +560,11 @@ namespace chmla
             "       Успішно збережено!",
             ""
             );
-                Application.Exit();
+                this.Close();
             }
             if (result == DialogResult.No)
             {
-                Application.Exit();
+                this.Close();
             }
         }
 

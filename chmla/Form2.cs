@@ -43,7 +43,7 @@ namespace chmla
 
             if (result == DialogResult.Yes)
             {
-                this.Close();
+                Application.Exit();
             }
         }
     }
