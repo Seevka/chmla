@@ -416,11 +416,11 @@ namespace chmla
             // textBox17
             // 
             this.textBox17.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox17.Location = new System.Drawing.Point(343, 477);
+            this.textBox17.Location = new System.Drawing.Point(263, 416);
             this.textBox17.Multiline = true;
             this.textBox17.Name = "textBox17";
             this.textBox17.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox17.Size = new System.Drawing.Size(556, 175);
+            this.textBox17.Size = new System.Drawing.Size(636, 251);
             this.textBox17.TabIndex = 34;
             this.textBox17.TextChanged += new System.EventHandler(this.textBox17_TextChanged);
             // 
@@ -568,7 +568,7 @@ namespace chmla
             this.label26.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label26.Location = new System.Drawing.Point(555, 443);
+            this.label26.Location = new System.Drawing.Point(559, 371);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(98, 20);
             this.label26.TabIndex = 50;
@@ -634,6 +634,8 @@ namespace chmla
             this.AccessibleName = "qwerty";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1058, 664);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);

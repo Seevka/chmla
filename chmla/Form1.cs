@@ -308,7 +308,7 @@ namespace chmla
 
                 if (countt == 1)
                 {
-                    textBox17.Text += "Матриця недійсна, визначник = 0";
+                    textBox17.Text += "Матриця вироджена, визначник = 0";
                 }
                 if (countt==0)
                 {
@@ -387,7 +387,7 @@ namespace chmla
                 for (int k = 0; k < row; k++)
                 {
                     int noob = k;
-                    if (A[k, k] == 0)//перевіряємо чи катий елемент є 0, якщо є міняємо першим який не 0(рядки)
+                    if (A[k, k] == 0)
                     {
                         while (A[noob, k] == 0&&k!=row-1)
                         {
@@ -445,7 +445,7 @@ namespace chmla
 
                 if (count == 1)
                 {
-                    textBox17.Text += "Матриця недійсна, визначник = 0";
+                    textBox17.Text += "Матриця вироджена, визначник = 0";
                 }
                 if(count==0)
                 {
