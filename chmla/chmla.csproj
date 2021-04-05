@@ -104,7 +104,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Matrix.txt" />
+    <Content Include="Matrix1.txt" />
+    <Content Include="Matrix2.txt" />
     <Content Include="Vector.txt" />
+    <Content Include="Vector1.txt" />
+    <Content Include="Vector2.txt" />
     <Content Include="Леон_Skin-Default.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

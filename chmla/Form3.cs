@@ -17,8 +17,8 @@ namespace chmla
         double[] temp;
         double[] L;
         double[] T;
-        const string matrixFilePath = @"C:\Users\Sevka\source\repos\chmla\chmla\Matrix.txt";
-        const string vectorFilePath = @"C:\Users\Sevka\source\repos\chmla\chmla\Vector.txt";
+        const string matrixFilePath = @"C:\Users\Sevka\source\repos\chmla\chmla\Matrix2.txt";
+        const string vectorFilePath = @"C:\Users\Sevka\source\repos\chmla\chmla\Vector2.txt";
 
 
         public Form3()
@@ -62,7 +62,7 @@ namespace chmla
         }
         private void Calculate(int size_)
         {
-            U = new double[size_][];
+            U = new double[size_][];//A*X
             V = new double[size_][];
             double[][] A = new double[size_][];
             for (int i = 0; i < (size_); i++)
@@ -85,10 +85,9 @@ namespace chmla
                     }
                 }
             temp = new double[size_];
-            L = new double[size_];
-            T = new double[size_];
-            //Начальная иттерация:
-
+            L = new double[size_];//те що ділиться знизу
+            T = new double[size_];//альфми
+            //Початкова ітерація
             for (int i = 0; i < size_; i++)
             {
                 U[0][i] = (A[0][i]);               //U[0]
@@ -100,10 +99,10 @@ namespace chmla
             }
             T[0] = F[0] / L[0];                     //H[0]
 
-            //Последующие иттерации
-            int count = 1; //Счетчик переменных для которых уже найдены первые значения 
+            //Наступні ітерації
+            int count = 1; //Де знайдено вже перші значення
             int n = 0;
-            double t;
+            double t;//лямбди
 
 
             do
@@ -129,16 +128,16 @@ namespace chmla
                 }
 
 
-                //Нашли U
+                //Знайшли U
                 for (int i = 0; i < size_; i++)
                 {
                     U[count][i] = A[count][i] - temp[i];
                 }
 
-                //Нашли L
+                //Знайшли L
                 L[count] = Math.Sqrt(scalar(U[count], U[count], size_));
 
-                //Нашли H
+                //Знайшли H
                 T[count] = (F[count] - temp_h) / (L[count]);
 
                 //V_[i]
@@ -160,7 +159,6 @@ namespace chmla
                     x += V[j][i] * T[j];
                 }
                 textBox1.Text+=($"X_{i + 1} = {Math.Round(x,3)}{Environment.NewLine}");
-                //cout << "X_" << i + 1 << " = " << x << endl;
                 x = 0;
             }
         }
