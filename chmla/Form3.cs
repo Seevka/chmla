@@ -17,8 +17,8 @@ namespace chmla
         double[] temp;
         double[] L;
         double[] T;
-        const string matrixFilePath = @"C:\Users\Sevka\source\repos\chmla\chmla\Matrix2.txt";
-        const string vectorFilePath = @"C:\Users\Sevka\source\repos\chmla\chmla\Vector2.txt";
+        const string matrixFilePath = @"C:\Users\Sevka\source\repos\chmla\chmla\Matrix1.txt";
+        const string vectorFilePath = @"C:\Users\Sevka\source\repos\chmla\chmla\Vector1.txt";
 
 
         public Form3()
@@ -158,7 +158,7 @@ namespace chmla
                 {
                     x += V[j][i] * T[j];
                 }
-                textBox1.Text+=($"X_{i + 1} = {Math.Round(x,3)}{Environment.NewLine}");
+                textBox1.Text+=($"X{i + 1} = {Math.Round(x,3)}{Environment.NewLine}");
                 x = 0;
             }
         }
@@ -166,6 +166,8 @@ namespace chmla
         private void button4_Click(object sender, EventArgs e)
         {
             Calculate(sizeForFunc);
+            int n = 3;
+            textBox1.Text += n;
             
         }
 
@@ -321,6 +323,16 @@ namespace chmla
         "       Успішно збережено!",
         ""
         );
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

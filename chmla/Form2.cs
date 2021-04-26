@@ -46,5 +46,12 @@ namespace chmla
                 Application.Exit();
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form4 frm4 = new Form4();
+            frm4.Activate();
+            frm4.Show();
+        }
     }
 }
