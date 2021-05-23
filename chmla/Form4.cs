@@ -296,7 +296,7 @@ namespace chmla
         private void button4_Click(object sender, EventArgs e)
         {
             textBox1.Text = "";
-            string epsInput = Interaction.InputBox("Введіть, будь ласка, наближення", "наближення");
+            string epsInput = Interaction.InputBox("Введіть, будь ласка, наближення", "Наближення");
             double[] x0 = new double[sizeForFunc];
             var h = GetFromD();
             if(checkBox1.Checked)
@@ -407,6 +407,16 @@ namespace chmla
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
             checkBox1.Checked = false;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
